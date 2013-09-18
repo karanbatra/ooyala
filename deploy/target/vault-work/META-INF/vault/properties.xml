@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Ooyala Adobe CQ5 Deploy Package</comment>
+<entry key="createdBy">batra</entry>
+<entry key="name">ooyala-deploy</entry>
+<entry key="created">2013-09-18T16:47:20.938+0530</entry>
+<entry key="groupId">com.siteworx.cq5.ooyala</entry>
+<entry key="version">2.1.0-SNAPSHOT</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">com.siteworx.cq5.ooyala</entry>
+<entry key="description">Ooyala's Adobe CQ5 Connector, built by Siteworx in NYC.</entry>
+<entry key="artifactId">ooyala-deploy</entry>
+<entry key="path">/etc/packages/com.siteworx.cq5.ooyala/ooyala-deploy.zip</entry>
+</properties>

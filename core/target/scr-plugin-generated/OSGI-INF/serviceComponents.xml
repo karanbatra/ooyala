@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component enabled="true" immediate="true" name="com.adobe.acs.nrl.ooyala.impl.OoyalaConfigurationServiceImpl" activate="activate">
+        <implementation class="com.adobe.acs.nrl.ooyala.impl.OoyalaConfigurationServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.adobe.acs.nrl.ooyala.OoyalaConfigurationService"/>
+        </service>
+        <property name="service.pid" value="com.adobe.acs.nrl.ooyala.impl.OoyalaConfigurationServiceImpl"/>
+        <reference name="resourceResolverFactory" interface="org.apache.sling.api.resource.ResourceResolverFactory" cardinality="1..1" policy="static" bind="bindResourceResolverFactory" unbind="unbindResourceResolverFactory"/>
+    </scr:component>
+    <scr:component enabled="true" immediate="true" name="com.siteworx.cq5.ooyala.service.OoyalaConfigurationService" activate="activate" modified="modified">
+        <implementation class="com.siteworx.cq5.ooyala.service.OoyalaConfigurationService"/>
+        <service servicefactory="false">
+            <provide interface="com.siteworx.cq5.ooyala.service.OoyalaConfigurationService"/>
+            <provide interface="org.osgi.service.event.EventHandler"/>
+        </service>
+        <property name="event.topics" type="String">
+            org/apache/sling/api/resource/Resource/CHANGED
+            org/apache/sling/api/resource/Resource/ADDED
+            org/apache/sling/api/resource/Resource/REMOVED
+        </property>
+        <property name="service.pid" value="com.siteworx.cq5.ooyala.service.OoyalaConfigurationService"/>
+        <reference name="resourceResolverFactory" interface="org.apache.sling.api.resource.ResourceResolverFactory" cardinality="1..1" policy="static" bind="bindResourceResolverFactory" unbind="unbindResourceResolverFactory"/>
+    </scr:component>
+    <scr:component enabled="true" immediate="true" name="com.siteworx.cq5.ooyala.service.OoyalaService">
+        <implementation class="com.siteworx.cq5.ooyala.service.OoyalaService"/>
+        <service servicefactory="false">
+            <provide interface="com.siteworx.cq5.ooyala.service.OoyalaService"/>
+        </service>
+        <property name="service.pid" value="com.siteworx.cq5.ooyala.service.OoyalaService"/>
+        <reference name="configService" interface="com.siteworx.cq5.ooyala.service.OoyalaConfigurationService" cardinality="1..1" policy="static" bind="bindConfigService" unbind="unbindConfigService"/>
+    </scr:component>
+    <scr:component enabled="true" immediate="true" name="com.adobe.acs.nrl.ooyala.OoyalaNRLServlet">
+        <implementation class="com.adobe.acs.nrl.ooyala.OoyalaNRLServlet"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+            <provide interface="javax.servlet.ServletConfig"/>
+            <provide interface="java.io.Serializable"/>
+        </service>
+        <property name="sling.servlet.paths" type="String" value="/bin/nrl/ooyala"/>
+        <property name="service.pid" value="com.adobe.acs.nrl.ooyala.OoyalaNRLServlet"/>
+        <reference name="ooyalaConfigurationService" interface="com.adobe.acs.nrl.ooyala.OoyalaConfigurationService" cardinality="1..1" policy="static" bind="bindOoyalaConfigurationService" unbind="unbindOoyalaConfigurationService"/>
+        <reference name="ooyalaService" interface="com.siteworx.cq5.ooyala.service.OoyalaService" cardinality="1..1" policy="static" bind="bindOoyalaService" unbind="unbindOoyalaService"/>
+    </scr:component>
+    <scr:component enabled="true" immediate="true" name="com.siteworx.cq5.ooyala.servlet.OoyalaServlet" activate="activate">
+        <implementation class="com.siteworx.cq5.ooyala.servlet.OoyalaServlet"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+            <provide interface="javax.servlet.ServletConfig"/>
+            <provide interface="java.io.Serializable"/>
+        </service>
+        <property name="sling.servlet.paths" type="String" value="/bin/wcm/ooyala"/>
+        <property name="service.pid" value="com.siteworx.cq5.ooyala.servlet.OoyalaServlet"/>
+        <reference name="ooyalaService" interface="com.siteworx.cq5.ooyala.service.OoyalaService" cardinality="1..1" policy="static" bind="bindOoyalaService" unbind="unbindOoyalaService"/>
+        <reference name="ooyalaConfigurationService" interface="com.siteworx.cq5.ooyala.service.OoyalaConfigurationService" cardinality="1..1" policy="static" bind="bindOoyalaConfigurationService" unbind="unbindOoyalaConfigurationService"/>
+    </scr:component>
+    <scr:component enabled="true" immediate="true" name="com.siteworx.cq5.ooyala.servlet.OoyalaSuggestionServlet">
+        <implementation class="com.siteworx.cq5.ooyala.servlet.OoyalaSuggestionServlet"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+            <provide interface="javax.servlet.ServletConfig"/>
+            <provide interface="java.io.Serializable"/>
+        </service>
+        <property name="sling.servlet.paths" type="String" value="/bin/wcm/ooyala/suggestions"/>
+        <property name="service.pid" value="com.siteworx.cq5.ooyala.servlet.OoyalaSuggestionServlet"/>
+        <reference name="ooyalaService" interface="com.siteworx.cq5.ooyala.service.OoyalaService" cardinality="1..1" policy="static" bind="bindOoyalaService" unbind="unbindOoyalaService"/>
+    </scr:component>
+    <scr:component enabled="true" immediate="true" name="com.siteworx.cq5.ooyala.servlet.UploadProxyServlet">
+        <implementation class="com.siteworx.cq5.ooyala.servlet.UploadProxyServlet"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+            <provide interface="javax.servlet.ServletConfig"/>
+            <provide interface="java.io.Serializable"/>
+        </service>
+        <property name="sling.servlet.paths" type="String" value="/bin/ooyala/upload/assets"/>
+        <property name="service.pid" value="com.siteworx.cq5.ooyala.servlet.UploadProxyServlet"/>
+        <reference name="ooyalaService" interface="com.siteworx.cq5.ooyala.service.OoyalaService" cardinality="1..1" policy="static" bind="bindOoyalaService" unbind="unbindOoyalaService"/>
+    </scr:component>
+</components>

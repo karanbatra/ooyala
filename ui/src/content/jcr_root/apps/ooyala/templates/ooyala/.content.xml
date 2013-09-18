@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="Account settings for Ooyala access"
+    jcr:primaryType="cq:Template"
+    jcr:title="Ooyala Configuration"
+    sling:resourceSuperType="cq/cloudserviceconfigs/templates/configpage"
+    allowedChildren="[/libs/cq/analytics/templates/framework]"
+    allowedPaths="[/etc/cloudservices/ooyala(/.*)?,/etc/cloudservices/ooyala-configuration(/.*)?]"
+    ranking="{Long}90">
+    <jcr:content
+        cq:cloudservicename="ooyala"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="/apps/ooyala/config/components/toolsConfig"/>
+</jcr:root>

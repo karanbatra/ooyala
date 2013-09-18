@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/ooyala/install/ooyala-core-2.1.0-SNAPSHOT.jar" />
+    <filter root="/etc/packages/com.siteworx.cq5.ooyala/ooyala-ui-2.1.0-SNAPSHOT.zip" />
+</workspaceFilter>

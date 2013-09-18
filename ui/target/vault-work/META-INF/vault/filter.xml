@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/ooyala">
+    	<exclude pattern="/apps/ooyala/install"/>
+    </filter>
+    <filter root="/etc/cloudservices/ooyala-configuration"/>
+    <filter root="/etc/ooyala"/>
+    <filter root="/etc/map/ooyala_progress_map"/>
+</workspaceFilter>

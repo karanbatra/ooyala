@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Edit Component"
+    xtype="dialog">
+    <items
+        jcr:primaryType="nt:unstructured"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <set
+                jcr:primaryType="nt:unstructured"
+                border="false"
+                title="Ooyala Setup"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <apiKey
+                        jcr:primaryType="cq:Widget"
+                        emptyText="API Key"
+                        fieldLabel="API Key"
+                        name="./apiKey"
+                        width="240"
+                        xtype="textfield"/>
+                    <apiSecret
+                        jcr:primaryType="cq:Widget"
+                        emptyText="API Secret"
+                        fieldLabel="API Secret"
+                        name="./apiSecret"
+                        width="240"
+                        xtype="textfield"/>
+                    <metaKeys
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Add metadata keys that should be searchable from the content finder."
+                        fieldLabel="Metadata Keys"
+                        hideLabel="{Boolean}false"
+                        name="./metakey"
+                        orderable="{Boolean}false"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            xtype="textfield"/>
+                    </metaKeys>
+                    <path
+                        jcr:primaryType="cq:Widget"
+                        emptyText="Path"
+                        fieldLabel="Path"
+                        name="./path"
+                        width="240"
+                        xtype="pathfield"/>
+                </items>
+            </set>
+        </items>
+    </items>
+</jcr:root>

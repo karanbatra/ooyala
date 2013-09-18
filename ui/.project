@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+  <name>ooyala-ui</name>
+  <comment>Ooyala&apos;s Adobe CQ5 Connector, built by Siteworx in NYC. NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
+  <projects>
+    <project>ooyala-core</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+    <buildCommand>
+      <name>org.eclipse.m2e.core.maven2Builder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+    <nature>org.eclipse.m2e.core.maven2Nature</nature>
+  </natures>
+  <linkedResources>
+    <link>
+      <name>libs</name>
+      <type>2</type>
+      <location>/Users/rboll/Workspace/ooyala/Ooyala-AdobeCQ/ui/src/content/jcr_root/libs</location>
+    </link>
+  </linkedResources>
+</projectDescription>

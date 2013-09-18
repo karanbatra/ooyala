@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:cloudservicename="ooyala"
+        cq:lastModified="{Date}2013-09-18T16:34:55.029+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/ooyala/templates/ooyala"
+        jcr:lastModified="{Date}2013-09-18T16:34:55.025+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="geometrixx"
+        sling:resourceType="/apps/ooyala/config/components/toolsConfig"
+        apiKey="QxYmwxOuz2tUyHUQGuyxgYve9ITE.RourA"
+        apiSecret="aWo_IsWlIXbw6CvKYW_7AtVKWp8dZLvkbiftL0U4"
+        path="/content/geometrixx"/>
+</jcr:root>

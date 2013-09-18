@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                anchor="100%"
+                title="Player Properties"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <width
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        disabled="false"
+                        fieldLabel="Width"
+                        grow="false"
+                        hideLabel="false"
+                        maxLength="4"
+                        maxLengthText="4"
+                        name="./width"
+                        readOnly="false"
+                        selectOnFocus="false"
+                        validateOnBlur="true"
+                        xtype="textfield"/>
+                    <height
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        fieldLabel="Height"
+                        name="./height"
+                        validateOnBlur="true"
+                        xtype="textfield"/>
+                    <autoPlay
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        fieldLabel="Auto Play"
+                        name="./autoPlay"
+                        xtype="checkbox"/>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                border="false"
+                title="Advanced Settings"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <videoid
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Video Embed Code"
+                        name="./videoid"
+                        validateOnBlur="true"
+                        xtype="textfield"/>
+                    <playerID
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Choose Player"
+                        name="./playerID"
+                        options="$PATH.ooyalaPlayers.json"
+                        type="select"
+                        xtype="selection"/>
+                </items>
+            </tab2>
+        </items>
+    </items>
+</jcr:root>

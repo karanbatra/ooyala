@@ -1,0 +1,39 @@
+.ooyala {
+    background-image:url(../css/ooyala.png) !important;
+}
+
+.cq-cft-ooyala-vid {
+    border: 1px solid transparent !important;
+    margin: 4px !important;
+    padding: 4px !important;
+    float: left !important;
+    width: 142px !important;
+    height: 120px !important;
+    overflow: scroll;
+}
+
+.cq-cft-ooyala-vid .cq-cft-ooyala-vid:hover {
+    border: 1px solid #D0D0D0 !important;
+}
+
+.cq-cft-ooyala-vid.x-view-selected {
+    border: 1px solid #D0D0D0 !important;
+}
+
+.cq-cft-ooyala-ddproxy-wrapper, .cq-cft-ooyala-separator {
+    cursor: inherit !important;
+}
+
+.cq-cft-ooyala-image {
+    margin: auto;
+    max-height: 80px;
+    margin-top: 10px;
+}
+
+.cq-cft-ooyala-duration {
+    margin-left: 10px;
+}
+
+#radioGroupOoyala label {
+    width: 130px !important;
+}

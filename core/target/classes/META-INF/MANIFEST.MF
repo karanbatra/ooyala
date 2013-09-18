@@ -1,0 +1,64 @@
+Manifest-Version: 1.0
+Export-Package: com.siteworx.cq5.ooyala.service;uses:="javax.jcr,org.o
+ sgi.service.event,com.siteworx.cq5.ooyala.client,org.osgi.service.com
+ ponent,org.slf4j,org.apache.sling.api.resource,org.apache.sling.commo
+ ns.json,com.siteworx.cq5.ooyala.client.request",com.siteworx.cq5.ooya
+ la.client;uses:="com.siteworx.cq5.ooyala.client.request,org.slf4j,org
+ .apache.sling.commons.json",com.siteworx.cq5.ooyala.client.request;us
+ es:="com.siteworx.cq5.ooyala.client,org.slf4j,org.apache.sling.common
+ s.json",com.adobe.acs.nrl.ooyala;uses:="com.siteworx.cq5.ooyala.servi
+ ce,com.siteworx.cq5.ooyala.client,org.apache.sling.api.servlets,javax
+ .servlet,org.apache.sling.commons.json,org.apache.sling.api,org.slf4j
+ ",com.adobe.acs.nrl.ooyala.impl;uses:="com.day.cq.wcm.api,com.adobe.a
+ cs.nrl.ooyala,com.siteworx.cq5.ooyala.service,com.siteworx.cq5.ooyala
+ .client,org.slf4j,org.apache.sling.api.resource"
+Service-Component: OSGI-INF/serviceComponents.xml
+Embed-Directory: OSGI-INF/lib
+Private-Package: com.sun.jersey.core.provider.jaxb,com.sun.jersey.core
+ .impl.provider.header,com.sun.jersey.client.urlconnection,javax.ws.rs
+ ,com.sun.jersey.impl,com.sun.jersey.core.util,com.sun.jersey.core.pro
+ vider,com.sun.jersey.api.provider.jaxb,com.sun.jersey.core.spi.scanni
+ ng,com.sun.jersey.api.client.filter,com.sun.jersey.core.header,com.su
+ n.jersey.core.impl.provider.xml,com.sun.jersey.core.header.reader,com
+ .sun.jersey.api.client.async,com.sun.jersey.core.osgi,com.sun.jersey.
+ spi,com.sun.jersey.spi.inject,com.sun.jersey.client.impl,javax.ws.rs.
+ core,com.sun.jersey.localization,com.sun.jersey.core.spi.scanning.uri
+ ,com.sun.jersey.core.spi.component,com.sun.jersey.client.impl.async,c
+ om.sun.jersey.api.client.config,com.sun.jersey.core.spi.factory,com.s
+ un.jersey.client.proxy,com.sun.jersey.api.representation,com.sun.jers
+ ey.core.reflection,com.sun.jersey.core.spi.component.ioc,javax.ws.rs.
+ ext,com.sun.jersey.core.impl.provider.entity,com.sun.jersey.client.os
+ gi,com.sun.ws.rs.ext,com.sun.jersey.spi.service,com.sun.jersey.api.cl
+ ient,com.sun.jersey.api.uri,com.siteworx.cq5.ooyala.servlet
+Bundle-ClassPath: .,OSGI-INF/lib/jersey-core-1.13.jar,OSGI-INF/lib/jer
+ sey-client-1.13.jar
+Built-By: batra
+Bundle-Category: UNDP
+Tool: Bnd-0.0.311
+Bundle-Name: Ooyala Adobe CQ5 Core
+Created-By: Apache Maven Bundle Plugin
+Bundle-Vendor: Siteworx, Inc.
+Build-Jdk: 1.6.0_37
+Bundle-Version: 2.1.0.SNAPSHOT
+Bnd-LastModified: 1379503033860
+Embed-Transitive: true
+Bundle-ManifestVersion: 2
+Bundle-Description: Ooyala's Adobe CQ5 Connector, built by Siteworx in
+  NYC.
+Embed-Dependency: *;scope=compile|runtime
+Import-Package: com.adobe.acs.nrl.ooyala,com.adobe.acs.nrl.ooyala.impl
+ ,com.day.cq.commons,com.day.cq.wcm.api,com.siteworx.cq5.ooyala.client
+ ,com.siteworx.cq5.ooyala.client.request,com.siteworx.cq5.ooyala.servi
+ ce,javax.activation,javax.imageio,javax.imageio.spi,javax.imageio.str
+ eam,javax.jcr;version="2.0",javax.mail,javax.mail.internet,javax.mail
+ .util,javax.net.ssl,javax.servlet,javax.xml.bind,javax.xml.bind.annot
+ ation,javax.xml.parsers,javax.xml.stream,javax.xml.transform,javax.xm
+ l.transform.dom,javax.xml.transform.sax,javax.xml.transform.stream,ja
+ vax.xml.validation,org.apache.sling.api;version="2.1",org.apache.slin
+ g.api.resource;version="2.1",org.apache.sling.api.servlets;version="2
+ .1",org.apache.sling.commons.json;version="2.0",org.osgi.framework;ve
+ rsion="1.5",org.osgi.service.component;version="1.1",org.osgi.service
+ .event;version="1.2",org.slf4j;version="1.6",org.w3c.dom,org.xml.sax,
+ org.xml.sax.helpers
+Bundle-SymbolicName: com.siteworx.cq5.ooyala.core
+
